@@ -1,0 +1,20 @@
+using System;
+
+namespace task3
+{
+	class MainClass
+	{
+		public static void Main (string[] args)
+		{
+			int a;
+			Console.Write("Введите оценку:");
+			a = int.Parse (Console.ReadLine());
+			if (a > 3) {
+				Console.Write ("Зачет");
+			} 
+			else {
+				Console.Write ("Незачет");
+			}
+		}
+	}
+}
