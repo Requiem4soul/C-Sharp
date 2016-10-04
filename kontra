@@ -9,15 +9,18 @@ namespace eee
 			int x,y,flag = 0;
 			x = int.Parse (Console.ReadLine());//вводим х
 			y = int.Parse (Console.ReadLine());//вводим у
-			if ((x >= 0) && (x <= 4) && (Math.Abs (y) >= 4)) {
-			//проверяем по левой части части,в ней  -4<=y<=4 и 0<=x<=4
+			if (x >= 0) {
+				if ((x * x + y * y) <= 16) {
+					flag = 1;
+				}
+			}
+			else if (x <= 0) {
+				if ((x * x + y * y) <= 4) {
+					flag = 1;
+				}
 				flag = 1;
 			}
-			else if ((x <= 0) && (x >= -2) && (Math.Abs (y) >= 2)) {
-			//проверяем по правой части части,в ней  -2<=y<=2 и -2<=x<=0
-				flag = 1;
-			}
-			//Math.Abs() возвращает модуль числа,типо фитча и красиво
+			//обошлось без фитч
 			Console.Write ("{0}", flag);
 		}
 	}
